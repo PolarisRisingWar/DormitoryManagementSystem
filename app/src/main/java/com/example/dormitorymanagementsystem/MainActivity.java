@@ -59,6 +59,11 @@ public class MainActivity extends FragmentActivity {
         dorm_btn=findViewById(R.id.dorm_button);
         my_btn=findViewById(R.id.my_button);
         radioGroup=findViewById(R.id.bottomGroup);
+
+        life_btn.setBackgroundResource(R.drawable.shape2);
+        //shape1是橙色背景，shape2是白色背景
+        dorm_btn.setBackgroundResource(R.drawable.shape1);
+        my_btn.setBackgroundResource(R.drawable.shape2);
         /*5.31 morninglife_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,15 +74,21 @@ public class MainActivity extends FragmentActivity {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                life_btn.setBackgroundResource(R.drawable.shape2);
+                dorm_btn.setBackgroundResource(R.drawable.shape2);
+                my_btn.setBackgroundResource(R.drawable.shape2);
                 switch (checkedId){
                     case R.id.life_button:
                         go2LifeFragment();
+                        life_btn.setBackgroundResource(R.drawable.shape1);
                         break;
                     case R.id.dorm_button:
                         go2DormFragment();
+                        dorm_btn.setBackgroundResource(R.drawable.shape1);
                         break;
                     case R.id.my_button:
                         go2MyFragment();
+                        my_btn.setBackgroundResource(R.drawable.shape1);
                         break;
                     default:
                         break;
