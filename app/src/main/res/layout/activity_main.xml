@@ -23,27 +23,27 @@
         android:layout_height="wrap_content"
         android:id="@+id/bottomGroup"
         android:orientation="horizontal"
-        android:layout_weight="0.5">
+        android:gravity="center">
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@color/colorAccent"
+            style="@style/buttonStyle1"
             android:text="我的生活"
+            android:drawableTop="@drawable/lifepic"
             android:id="@+id/life_button"
+            android:layout_weight="1"
             />
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@color/colorAccent"
+            style="@style/buttonStyle1"
             android:text="寝室事务"
+            android:drawableTop="@drawable/dormpic"
             android:id="@+id/dorm_button"
+            android:layout_weight="1"
             />
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableTop="@color/colorAccent"
+            style="@style/buttonStyle1"
             android:text="个人中心"
+            android:drawableTop="@drawable/mypic"
             android:id="@+id/my_button"
+            android:layout_weight="1"
             />
     </RadioGroup>
 
