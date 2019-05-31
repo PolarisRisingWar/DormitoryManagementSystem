@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends AppCompatActivity {
     //主页面，有三个按钮，我的生活、寝室事务、个人中心
     //分别跳转至三个fragment
 
@@ -29,6 +29,9 @@ public class MainActivity extends FragmentActivity {
     LifeFragment lifeFragment;
     MyFragment myFragment;
     DormFragment dormFragment;
+
+    LoginFragment loginFragment;
+
     WeatherFragment weatherFragment;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +49,14 @@ public class MainActivity extends FragmentActivity {
         lifeFragment=new LifeFragment();
         myFragment=new MyFragment();
         dormFragment=new DormFragment();
+        loginFragment=new LoginFragment();
 
         fragmentTransaction.add(R.id.container,lifeFragment).
                 add(R.id.container,dormFragment).
-                add(R.id.container,myFragment);
+                add(R.id.container,myFragment).
+                add(R.id.container,loginFragment);
 
-        fragmentTransaction.hide(lifeFragment).hide(dormFragment).hide(myFragment);
+        defaultHide();
         fragmentTransaction.show(dormFragment).commit();//每个fragmentTransaction只能commit一次
         // 但似乎重新实例化fragmentTransaction还会保留原来的片段
 
@@ -98,6 +103,9 @@ public class MainActivity extends FragmentActivity {
         });
     }
 
+    public void defaultHide(){
+        fragmentTransaction.hide(lifeFragment).hide(dormFragment).hide(myFragment).hide(loginFragment);
+    }
     public void go2LifeFragment() {    //去我的生活页面
         /*5.30night fragmentManager=getSupportFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
@@ -106,19 +114,25 @@ public class MainActivity extends FragmentActivity {
         fragmentTransaction.commit();*/
 
         fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.hide(lifeFragment).hide(dormFragment).hide(myFragment);
+        defaultHide();
         fragmentTransaction.show(lifeFragment).commit();
     }
 
     public void go2DormFragment() {    //去寝室事务界面
         fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.hide(lifeFragment).hide(dormFragment).hide(myFragment);
+        defaultHide();
         fragmentTransaction.show(dormFragment).commit();
     }
 
     public void go2MyFragment() {    //去寝室事务界面
         fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.hide(lifeFragment).hide(dormFragment).hide(myFragment);
+        defaultHide();
         fragmentTransaction.show(myFragment).commit();
+    }
+
+    public void go2LoginFragment(){
+        fragmentTransaction=fragmentManager.beginTransaction();
+        defaultHide();
+        fragmentTransaction.show(loginFragment).commit();
     }
 }
