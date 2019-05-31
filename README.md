@@ -13,3 +13,9 @@ TODO：
 3.activity和fragment的选择：个人中心下所有按钮跳转到activity；寝室事务跳转到activity，继续跳转到activity，继续跳转到activity；我的生活用viewpager
 管理三个fragment天气、备忘录、新闻。  
 4.像知乎一样按返回键跳转回第一页（寝室事务页）。
+
+## 存图截图点：
+本来我想发无提取码版的，但由于形势紧张，百度网盘非要我发带提取码版的：  
+链接：https://pan.baidu.com/s/1HNFmTJ3LvWoCmKZlxLdqhg  
+提取码：n96o  
+复制这段内容后打开百度网盘手机App，操作更方便哦  
