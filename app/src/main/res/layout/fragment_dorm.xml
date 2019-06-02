@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DormFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context=".DormFragment"
+    android:orientation="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="成功进入寝室事务界面" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/out_in_management"
+            android:text="出入管理"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/in_out"/>
+        <!--按钮上的icon是100-->
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/danger_management"
+            android:text="危险品登记"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/danger"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/card_management"
+            android:text="校卡管理"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/card"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/daily_management"
+            android:text="寝室日常"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/dorm"/>
+    </LinearLayout>
 
-</FrameLayout>
+</LinearLayout>
