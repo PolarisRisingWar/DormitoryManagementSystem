@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".DailyActivity"></activity>
+        <activity android:name=".CardActivity" />
+        <activity android:name=".DangerActivity" />
+        <activity android:name=".OutInActivity" />
+        <activity android:name=".LoginActivity" />
 
         <meta-data
             android:name="com.google.android.actions"

@@ -1,5 +1,7 @@
 package com.example.dormitorymanagementsystem;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentTransaction fragmentTransaction;
     private RadioButton life_btn,dorm_btn,my_btn;
     RadioGroup radioGroup;//用这个radiogroup来装三个radiobutton
+    String TAG="MainActivity";
 
     //5.31：我现在的想法是把所有要用的fragment全部添加到mainactivity上，在fragment里要用主页方法的话调用getActivity()
     //后者以后再试。相信我可以的
@@ -85,15 +89,12 @@ public class MainActivity extends AppCompatActivity {
                 switch (checkedId){
                     case R.id.life_button:
                         go2LifeFragment();
-                        life_btn.setBackgroundResource(R.drawable.shape1);
                         break;
                     case R.id.dorm_button:
                         go2DormFragment();
-                        dorm_btn.setBackgroundResource(R.drawable.shape1);
                         break;
                     case R.id.my_button:
                         go2MyFragment();
-                        my_btn.setBackgroundResource(R.drawable.shape1);
                         break;
                     default:
                         break;
@@ -101,6 +102,27 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void onBackPressed(){//这是为了在按返回键后返回寝室事务界面。
+        // 不知道为什么，这么写的话，从我的生活或个人中心跳转以后就不能点击原按钮返回
+        //嗯，我认为，上一句注释的原因是，用户对radiogroup的选择没有改变，所以再次点击原按钮不会被switch监听到
+        /*life_btn.setBackgroundResource(R.drawable.shape2);
+        dorm_btn.setBackgroundResource(R.drawable.shape2);
+        my_btn.setBackgroundResource(R.drawable.shape2);
+        go2DormFragment();*/
+
+        //既然如此那就只能原地重来了
+        //onCreate(null);
+        //这个直接闪退了
+
+        //我整了这么个方法……但是那个转场动画看得不舒服，这明显就不是后退而是整了个新activity
+        Intent intent = new Intent(MainActivity.this,MainActivity.class);
+        startActivity(intent);
+
+        //overridePendingTransition(0, 0);
+        //这一句可以把那个转场动画关闭，但是会闪屏，瞎了
+        //就那个转场动画，凑活着用吧
     }
 
     public void defaultHide(){
@@ -116,18 +138,21 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction=fragmentManager.beginTransaction();
         defaultHide();
         fragmentTransaction.show(lifeFragment).commit();
+        life_btn.setBackgroundResource(R.drawable.shape1);
     }
 
     public void go2DormFragment() {    //去寝室事务界面
         fragmentTransaction=fragmentManager.beginTransaction();
         defaultHide();
         fragmentTransaction.show(dormFragment).commit();
+        dorm_btn.setBackgroundResource(R.drawable.shape1);
     }
 
-    public void go2MyFragment() {    //去寝室事务界面
+    public void go2MyFragment() {    //去个人中心界面
         fragmentTransaction=fragmentManager.beginTransaction();
         defaultHide();
         fragmentTransaction.show(myFragment).commit();
+        my_btn.setBackgroundResource(R.drawable.shape1);
     }
 
     public void go2LoginFragment(){

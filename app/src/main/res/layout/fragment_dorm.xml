@@ -16,7 +16,7 @@
             android:id="@+id/out_in_management"
             android:text="出入管理"
             android:layout_weight="1"
-            android:drawableTop="@drawable/in_out"/>
+            android:drawableTop="@drawable/in_out" />
         <!--按钮上的icon是100-->
         <Button
             android:layout_height="match_parent"
