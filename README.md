@@ -10,7 +10,7 @@ TODO：
 1.（checked）
 2.（postponed） 
 3.（checked） 
-4.（checked）。
+4.（checked）
 
 ### 6.2
 
@@ -32,11 +32,11 @@ TODO：
 （3）新闻：直接找个新闻网站爬数据。  
 3.封装apk。
 
-## 存图截图点：
-本来我想发无提取码版的，但由于形势紧张，百度网盘非要我发带提取码版的：  
-链接：https://pan.baidu.com/s/1HNFmTJ3LvWoCmKZlxLdqhg  
-提取码：n96o  
+## 录屏（该分享七日有效）：
+链接：https://pan.baidu.com/s/1nFrkDYkvDtWRkKPCQUYFsA 
+提取码：2cru 
 复制这段内容后打开百度网盘手机App，操作更方便哦  
+注：由于华为手机比较智能，所以录屏过程中输入密码的部分直接黑屏了。视频没坏。  
 
 ## Tips：
 1.管理员、宿管、教师界面没有搞。要求他们都去登录PC版。
