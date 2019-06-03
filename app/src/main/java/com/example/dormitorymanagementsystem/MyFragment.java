@@ -79,7 +79,12 @@ public class MyFragment extends Fragment {
                     //底下这两句没用。跳转到哪个fragment都不行。必须要重来一遍本fragment创建过程才行
                     //MainActivity  mainActivity = (MainActivity) getActivity();
                     //mainActivity.go2DormFragment();
-                    onActivityCreated(null);
+                    //光重启本fragment不行，毕竟隔壁fragment也要用这个sharedpreference
+                    // 所以要刷新整个activity
+                    // onActivityCreated(null);
+
+                    Intent intent = new Intent(getActivity(),MainActivity.class);
+                    startActivity(intent);
                 }
             });
             //TODO：正经来说，这里面的图片、用户名应该援引自数据库的

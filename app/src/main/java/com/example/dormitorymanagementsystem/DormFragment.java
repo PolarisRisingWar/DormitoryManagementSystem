@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class DormFragment extends Fragment {
-
+    String TAG="DormFragment";
 
     public DormFragment() {
         // Required empty public constructor
