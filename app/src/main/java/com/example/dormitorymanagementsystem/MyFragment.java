@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,19 +23,18 @@ public class MyFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_my, container, false);
     }
 
-    //这是我在网上找到的一种实例化fragment布局文件里组件的方法
     Button login_btn,personal_info,card_info,notification,suggestion,change_password;
     TextView user_name;
     String TAG="MyFragment";
     ImageView avatar;
+    String studentId,passWord,student_name;
+
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
 
         final SharedPreferences loginInfo=this.getActivity().getSharedPreferences("loginInfo",0);
-        String studentId=loginInfo.getString("studentId","");
-        String passWord=loginInfo.getString("passWord","");
-        Log.i(TAG, "onActivityCreated: "+studentId+"    "+passWord);
-        //如果有的话，studentId和passWord就分别是其值；如果没有的话，就都是空值；截止6.2，尚未报错
+        studentId=loginInfo.getString("studentId","");
+        passWord=loginInfo.getString("passWord","");
 
         login_btn=getActivity().findViewById(R.id.login_btn);
         personal_info=getActivity().findViewById(R.id.personal_info);
@@ -52,22 +50,20 @@ public class MyFragment extends Fragment {
             user_name.setText("用户名");
             avatar.setImageResource(R.drawable.default_avatar);
             login_btn.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                /*MainActivity  mainActivity = (MainActivity) getActivity();
-                mainActivity.go2LoginFragment();*/
+                public void onClick(View v) {    //跳转到登录界面
                     Intent intent = new Intent(getActivity(), LoginActivity.class);
                     startActivity(intent);
                 }
             });
-            //点击剩下所有控件都会弹出“请登录”Toast
-            //为了少写几句代码，我写个综合性的View.OnClickListener default_listener放在最下面了
             personal_info.setOnClickListener(default_listener);
             card_info.setOnClickListener(default_listener);
             notification.setOnClickListener(default_listener);
             suggestion.setOnClickListener(default_listener);
             change_password.setOnClickListener(default_listener);
         }
+
         else {//用户已经登录
+            //退出按钮
             login_btn.setText("退出");
             //退出就是把loginInfo这个sharedpreference清空
             login_btn.setOnClickListener(new View.OnClickListener() {
@@ -76,22 +72,35 @@ public class MyFragment extends Fragment {
                     SharedPreferences.Editor editor = loginInfo.edit();
                     editor.clear();
                     editor.apply();
-                    //底下这两句没用。跳转到哪个fragment都不行。必须要重来一遍本fragment创建过程才行
-                    //MainActivity  mainActivity = (MainActivity) getActivity();
-                    //mainActivity.go2DormFragment();
-                    //光重启本fragment不行，毕竟隔壁fragment也要用这个sharedpreference
-                    // 所以要刷新整个activity
-                    // onActivityCreated(null);
-
                     Intent intent = new Intent(getActivity(),MainActivity.class);
                     startActivity(intent);
                 }
             });
-            //TODO：正经来说，这里面的图片、用户名应该援引自数据库的
-            //我就先写个示意性的界面
-            user_name.setText("信院老王");
+
+            //用户名
+            student_name=loginInfo.getString("student_name","");
+            user_name.setText(student_name);
+
+            //用户头像
             avatar.setImageResource(R.drawable.an_avatar);
-            //TODO：一堆跳转过去的activity
+
+            //个人信息
+            personal_info.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),PersonalInfoActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            //校园卡信息or校园卡账单
+            card_info.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),CardInfoActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
     }
 
