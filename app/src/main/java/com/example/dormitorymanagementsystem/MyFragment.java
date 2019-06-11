@@ -28,6 +28,8 @@ public class MyFragment extends Fragment {
     String TAG="MyFragment";
     ImageView avatar;
     String studentId,passWord,student_name;
+    ChangePasswordDialog changePasswordDialog;
+    DefaultDialog defaultDialog;
 
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
@@ -99,6 +101,33 @@ public class MyFragment extends Fragment {
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(),CardInfoActivity.class);
                     startActivity(intent);
+                }
+            });
+
+            //通知信息
+            notification.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),NoteActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            //建议与反馈
+            suggestion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),SuggestionActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            //修改密码
+            change_password.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //defaultDialog=new DefaultDialog(getActivity(),"默认");
+                    changePasswordDialog=new ChangePasswordDialog(getActivity(),studentId,passWord);
                 }
             });
         }

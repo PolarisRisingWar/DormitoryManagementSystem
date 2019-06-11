@@ -1,13 +1,10 @@
 package com.example.dormitorymanagementsystem;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,18 +15,15 @@ import android.widget.Toast;
 public class DormFragment extends Fragment {
     String TAG="DormFragment";
 
-    public DormFragment() {
-        // Required empty public constructor
-    }
+    public DormFragment() {}
 
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_dorm, container, false);
     }
 
     Button out_in_management,danger_management,card_management,daily_management;
+
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -56,7 +50,7 @@ public class DormFragment extends Fragment {
         }
     }
 
-    View.OnClickListener jump2_listener(final Activity activity) {  //6月2日：我这么搞似乎是成功了来着
+    View.OnClickListener jump2_listener(final Activity activity) {
         return new View.OnClickListener() {  //这个是登陆后，各个按钮跳转到不同activity
             @Override
             public void onClick(View v) {

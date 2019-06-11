@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CardInfoActivity"></activity>
+        <activity android:name=".DailyOutInActivity"></activity>
+        <activity android:name=".SuggestionActivity" />
+        <activity android:name=".NoteActivity" />
+        <activity android:name=".CardInfoActivity" />
         <activity android:name=".PersonalInfoActivity" />
         <activity android:name=".DailyActivity" />
         <activity android:name=".CardActivity" />

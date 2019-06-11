@@ -9,9 +9,11 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 
 public class PersonalInfoActivity extends AppCompatActivity implements View.OnClickListener {
+    //个人信息界面
 
     String studentId,student_name,in_year,phone,profession,institute,dorm_building,dorm_number;
-    double card_balance=100.00;//校园卡余额
+    CardInfoActivity cardInfoActivity=new CardInfoActivity();
+    double card_balance=170.30;//校园卡余额
     double water_balance=21.11;//热水余额
     double electricity_balance=18.01;//电费余额
     double credit_score=130.6;//信用积分
@@ -59,6 +61,12 @@ public class PersonalInfoActivity extends AppCompatActivity implements View.OnCl
         dormBuilding.setText(dorm_building);
         dormNumber.setText(dorm_number);
 
+        try {
+            card_balance=Double.parseDouble(cardInfoActivity.balance);
+        }
+        catch (Exception e){
+
+        }
         cardBalance.setText(card_balance+"");
         waterBalance.setText(water_balance+"");
         electricityBalance.setText(electricity_balance+"");

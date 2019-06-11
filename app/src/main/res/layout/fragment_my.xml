@@ -25,7 +25,8 @@
         tools:src="@tools:sample/avatars"
         android:layout_weight="1"
         android:src="@drawable/default_avatar"
-        android:layout_marginBottom="10sp"/>
+        android:layout_marginBottom="10sp"
+        android:contentDescription="图片无法加载"/>
     <!--这个图片是64*64-->
 
     <TextView
@@ -71,9 +72,10 @@
         android:text="建议与反馈" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="修改密码"
-        android:id="@+id/change_password"/>
+        android:id="@+id/change_password"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
