@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OuterActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:id="@+id/backFromOuter"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="外部人员出入登记"
+        android:textSize="25dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注：请学生家长、同学进出寝室时必填此表！"
+        android:paddingTop="@dimen/paddingSize"
+        android:paddingBottom="@dimen/paddingSize"
+        android:paddingLeft="@dimen/paddingSize"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/outer_radiogroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出寝室"
+            android:paddingRight="30dp"
+            android:id="@+id/outer_out"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入寝室"
+            android:paddingRight="30dp"
+            android:id="@+id/outer_in"/>
+    </RadioGroup>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView android:text="学生学号（不可更改）" />
+            <EditText
+                android:id="@+id/student_id_in_outer"
+                android:inputType="number"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="进出人员姓名" />
+            <EditText
+                android:id="@+id/outer_name"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="进出人员身份证号" />
+            <EditText
+                android:id="@+id/outer_idnumber"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="填写时间（不可更改）" />
+            <EditText
+                android:id="@+id/outer_time"
+                android:focusable="false"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_outer"
+        android:layout_gravity="center"
+        android:text="提交"/>
+
+</LinearLayout>

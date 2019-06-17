@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewDangerActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:id="@+id/backFromNewDanger"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="危险品登记"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView android:text="学号（不可更改）" />
+            <EditText
+                android:id="@+id/student_id_in_new_danger"
+                android:inputType="number"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="危险品名称" />
+            <EditText android:id="@+id/danger_name"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="填写日期（不可更改）" />
+            <EditText
+                android:id="@+id/date_in_new_danger"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="备注" />
+            <EditText android:id="@+id/danger_remark"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注：请将危险品的品牌写在备注栏"
+        android:gravity="right"
+        android:paddingRight="@dimen/paddingSize"
+        android:paddingBottom="@dimen/paddingSize"
+        android:paddingTop="@dimen/paddingSize" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:id="@+id/submit_danger"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请您在进行登记后将该物品拿到慧园楼下登记处审核"
+        android:gravity="center"
+        android:paddingTop="@dimen/paddingSize"/>
+
+</LinearLayout>

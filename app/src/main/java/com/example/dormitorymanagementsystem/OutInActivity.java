@@ -37,11 +37,19 @@ public class OutInActivity extends AppCompatActivity implements View.OnClickList
                 jump(new DailyOutInActivity());
                 break;
             case R.id.out_record:
-                //离校登记
+                jump(new LeftActivity());
+                break;
+            case R.id.outer_record:
+                jump(new OuterActivity());
+                break;
+            case R.id.big_out_in:
+                jump(new BigActivity());
+                break;
         }
     }
 
     void jump(Activity activity){
+        //跳转到其他activity
         Intent intent = new Intent(OutInActivity.this, activity.getClass());
         startActivity(intent);
     }

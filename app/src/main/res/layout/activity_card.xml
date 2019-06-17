@@ -11,54 +11,78 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="返回"
-        android:id="@+id/backFromCard"/>
+        android:id="@+id/backFromCard"
+        android:layout_weight="0.1"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="校卡管理界面"/>
+        android:text="校卡管理界面"
+        android:layout_weight="0.5"
+        android:textSize="30dp"
+        android:gravity="center"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="失物招领"
-        android:id="@+id/lost_found"/>
+        android:id="@+id/lost_found"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:drawableRight="@drawable/lost_found"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="挂失"
-            android:id="@+id/report_loss"/>
+            android:id="@+id/report_loss"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:drawableRight="@drawable/report_loss_icon"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="补办"
-            android:id="@+id/reissue"/>
+            android:id="@+id/reissue"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:drawableRight="@drawable/reissue_icon"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="充值"
-            android:id="@+id/recharge"/>
+            android:id="@+id/recharge"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:drawableRight="@drawable/recharge_icon"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="转账"
-            android:id="@+id/transfer"/>
+            android:id="@+id/transfer"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:drawableRight="@drawable/transfer_icon"/>
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="交易记录"
-        android:id="@+id/transaction_record"/>
+        android:id="@+id/transaction_record"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:drawableRight="@drawable/transcation_icon"/>
 </LinearLayout>

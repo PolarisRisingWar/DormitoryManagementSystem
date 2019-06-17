@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BigActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:id="@+id/backFromBig"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="大件物品出入登记"
+        android:textSize="25dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注：大件物品包括电脑、行李箱等"
+        android:gravity="right"
+        android:paddingTop="@dimen/paddingSize"
+        android:paddingBottom="@dimen/paddingSize"
+        android:paddingRight="@dimen/paddingSize"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/big_radiogroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出寝室"
+            android:paddingRight="30dp"
+            android:id="@+id/big_out"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入寝室"
+            android:paddingRight="30dp"
+            android:id="@+id/big_in"/>
+    </RadioGroup>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView android:text="学生学号（不可更改）" />
+            <EditText
+                android:id="@+id/student_id_in_big"
+                android:inputType="number"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="物品名称" />
+            <EditText
+                android:id="@+id/big_name"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="填写时间（不可更改）" />
+            <EditText
+                android:id="@+id/big_time"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="备注"/>
+            <EditText android:id="@+id/remarks_in_big"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注：电脑请在备注栏注明电脑品牌"
+        android:paddingTop="@dimen/paddingSize"
+        android:paddingBottom="@dimen/paddingSize"
+        android:gravity="right"
+        android:paddingRight="@dimen/paddingSize"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_big"
+        android:layout_gravity="center"
+        android:text="提交"/>
+
+</LinearLayout>

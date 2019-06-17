@@ -11,23 +11,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="返回"
-        android:id="@+id/backFromDanger"/>
+        android:id="@+id/backFromDanger"
+        android:layout_weight="0.1"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="危险品登记"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:layout_weight="0.5"
+        android:textSize="30dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="登记记录"
-        android:id="@+id/danger_record"/>
+        android:id="@+id/danger_record"
+        android:layout_weight="1"
+        android:drawableRight="@drawable/danger_old"
+        android:textSize="25sp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="新建登记表"
-        android:id="@+id/new_danger"/>
+        android:id="@+id/new_danger"
+        android:layout_weight="1"
+        android:drawableRight="@drawable/record"
+        android:textSize="25sp"/>
 </LinearLayout>

@@ -42,7 +42,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="外部人员出入"
+        android:text="外部人员出入登记"
         android:id="@+id/outer_record"
         android:layout_weight="1"
         android:drawableRight="@drawable/outer"/>

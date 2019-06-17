@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeftActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:id="@+id/backFromLeft"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="离校登记表"
+        android:textSize="25dp"
+        android:gravity="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView android:text="学号（不可更改）" />
+            <EditText
+                android:id="@+id/student_id_in_left"
+                android:inputType="number"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="姓名（不可更改）" />
+            <EditText
+                android:id="@+id/student_name_in_left"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="填写日期（不可更改）" />
+            <EditText
+                android:id="@+id/time_in_left"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="联系电话" />
+            <EditText
+                android:id="@+id/phone_in_left"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="寝室号" />
+            <EditText android:id="@+id/dorm_in_left" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:paddingRight="@dimen/paddingSize"
+                android:text="行程目的地" />
+            <EditText android:id="@+id/destination_in_left" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="离校日期" />
+            <EditText
+                android:id="@+id/left_time"
+                android:inputType="none"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="返校日期" />
+            <EditText
+                android:id="@+id/back_time"
+                android:inputType="none"
+                android:focusable="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="陪同人员" />
+            <EditText android:id="@+id/company" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="注：如无陪同人员，请填“无”"
+        android:paddingBottom="@dimen/paddingSize"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="提交"
+        android:id="@+id/left_submit"/>
+
+</LinearLayout>

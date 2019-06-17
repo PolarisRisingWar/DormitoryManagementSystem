@@ -11,44 +11,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="返回"
-        android:id="@+id/backFromDaily"/>
+        android:id="@+id/backFromDaily"
+        android:layout_weight="0.1"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="寝室日常管理"/>
+        android:text="寝室日常管理"
+        android:layout_weight="0.5"
+        android:textSize="30dp"
+        android:gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="预约维修"
             android:id="@+id/repair"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:drawableRight="@drawable/repair"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="购买水票"
             android:id="@+id/water_purchase"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:drawableRight="@drawable/purchase_water"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="寝室自习室"
             android:id="@+id/study_room"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:drawableRight="@drawable/studyroom"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="寝室用水"
             android:id="@+id/water_use"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:drawableRight="@drawable/use_water"/>
     </LinearLayout>
 </LinearLayout>
