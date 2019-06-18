@@ -23,7 +23,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="注：请学生家长、同学进出寝室时必填此表！"
+        android:text="注：请学生家长、同学进出寝室时填写此表"
         android:paddingTop="@dimen/paddingSize"
         android:paddingBottom="@dimen/paddingSize"
         android:paddingLeft="@dimen/paddingSize"/>

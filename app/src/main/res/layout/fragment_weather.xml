@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".WeatherFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <com.heweather.plugin.view.LeftLargeView
+        android:id="@+id/ll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/default_dialog" />
+        android:paddingLeft="@dimen/paddingSize"/>
 
 </FrameLayout>

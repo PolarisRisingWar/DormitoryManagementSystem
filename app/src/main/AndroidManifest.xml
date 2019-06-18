@@ -5,6 +5,9 @@
     >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESSCOARSELOCATION" />
+    <uses-permission android:name="android.permission.ACCESSFINELOCATION" />
 
     <dist:module dist:instant="true" />
 
@@ -15,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LostFoundActivity"></activity>
+        <activity
+            android:name=".LostFoundActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"></activity>
         <activity android:name=".NewDangerActivity" />
         <activity android:name=".OldDangerActivity" />
         <activity android:name=".BigActivity" />
@@ -24,7 +29,9 @@
         <activity android:name=".DailyOutInActivity" />
         <activity android:name=".SuggestionActivity" />
         <activity android:name=".NoteActivity" />
-        <activity android:name=".CardInfoActivity" />
+        <activity
+            android:name=".CardInfoActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"/>
         <activity android:name=".PersonalInfoActivity" />
         <activity android:name=".DailyActivity" />
         <activity android:name=".CardActivity" />
@@ -43,6 +50,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.heweather.plugin.view.SdkWebViewActivity"></activity>
     </application>
 
 </manifest>
