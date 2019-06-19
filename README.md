@@ -17,8 +17,8 @@
 4.拓展功能：天气、备忘录（未开发）、新闻（未开发）  
 
 ## 应用文件（已签名的apk、简单的录屏演示和截图、数据库截图）：
-链接：https://pan.baidu.com/s/1H4PUAXuEI1C-Tf6N8pRLkA  
-提取码：w1yl  
+链接：https://pan.baidu.com/s/1iCxapUnLSxPZdkMuXvZNfg  
+提取码：2nor  
 复制这段内容后打开百度网盘手机App，操作更方便哦  
 注：华为手机录屏的过程中，输入密码的部分会直接黑屏 
 
