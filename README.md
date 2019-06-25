@@ -1,6 +1,9 @@
 # DormitoryManagementSystem
 我的移动技术开发与创业课程暨管理信息系统课程大作业。
 
+## 图标
+![image](https://github.com/PolarisRisingWar/DormitoryManagementSystem/edit/master/app/src/main/res/mipmap-hdpi/ic_launcher.png)
+
 ## 功能介绍
 寝室管理系统，可以实现常规寝室管理功能，有个人中心等附属功能。  
 通过JDBC连接数据库，使用华为云的MySQL5.6云数据库，APP客户端与数据库实时远程连接。天气界面使用和风天气的Android天气插件。  
