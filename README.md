@@ -2,7 +2,7 @@
 我的移动技术开发与创业课程暨管理信息系统课程大作业。
 
 ## 图标
-![image](https://github.com/PolarisRisingWar/DormitoryManagementSystem/edit/master/app/src/main/res/mipmap-hdpi/ic_launcher.png)
+![image](https://github.com/PolarisRisingWar/DormitoryManagementSystem/raw/master/app/src/main/res/mipmap-hdpi/ic_launcher.png)
 
 ## 功能介绍
 寝室管理系统，可以实现常规寝室管理功能，有个人中心等附属功能。  
